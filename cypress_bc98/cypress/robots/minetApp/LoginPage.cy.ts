@@ -7,7 +7,7 @@ const baseRobotHands = new RobotHands();
 
 export class LoginPageDepandence extends Dependencies{
        visitLoginPage(){
-        this.accessUrl("https://bc98fe.bootcamp64.tk/login" );
+        this.accessUrl(Cypress.env("host_url") );
     }
 }
 

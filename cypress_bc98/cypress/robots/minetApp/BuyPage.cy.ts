@@ -20,11 +20,18 @@ export class BuyPageEyes extends BaseEyes{
         baseRobotEyes.getByText("BUY CRYPTO")
     }
     AssertWatchData(){
-        baseRobotEyes.getByText("USD Coin")
-        baseRobotEyes.getByText("Total balance")
-        baseRobotEyes.readByDataTesId("transaction-card")
-        baseRobotEyes.getByText("CASH DEPOSIT")
-        baseRobotEyes.getByText("WITHDRAWAL")
+        const textsToCheck = [
+            "USD Coin",
+            "Total balance",
+            "CASH DEPOSIT",
+            "WITHDRAWAL"
+        ];
+
+        textsToCheck.forEach(text => {
+            this.baseRobotEyes.getByText(text);
+        });
+
+        this.baseRobotEyes.readByDataTestId("transaction-card");
     }
 }
 

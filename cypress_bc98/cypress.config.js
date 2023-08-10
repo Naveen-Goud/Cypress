@@ -1,11 +1,14 @@
 module.exports = {
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      
     },
 
   },
   env:{
-    host_url:"https://bc98fe.bootcamp64.tk/"
+    host_url:"http://bc98fe.bootcamp64.tk/login",
+    email:"shaikshakeelgr@gmail.com",
+    password:"shaik123@",
+
   }
 };
